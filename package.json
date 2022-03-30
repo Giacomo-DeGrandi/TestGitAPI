@@ -4,6 +4,7 @@
   "description": "localtunnelconfig",
   "main": "index.js",
   "scripts": {
+    "start": "node web.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/Giacomo-DeGrandi/TestPostLab/issues"
   },
-  "homepage": "https://github.com/Giacomo-DeGrandi/TestPostLab#readme"
+  "homepage": "https://github.com/Giacomo-DeGrandi/TestPostLab#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "tunnel": "0.0.6"
+  }
 }

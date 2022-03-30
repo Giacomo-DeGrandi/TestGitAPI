@@ -47,28 +47,3 @@ export class Owner {
 
 }
 
-
-/*
-export default class Repo {
-
-    constructor({repo, owner, user, desc, rele, link, tags, cont, lang}){
-        this.repo = repo
-        this.owner = owner
-        //this.octokit = new Octokit({ auth: "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" });
-    }
-
-    async getRepo(){
-        // https://api.github.com/repos/twbs/bootstrap
-        const response = await fetch(`https://api.github.com/repos/${this.owner}/${this.repo}`)
-        if(response.status === 200){
-            const json = await response.json()
-            console.log(json)
-        }
-
-    }
-
-}
-
-
-
- */
