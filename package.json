@@ -1,11 +1,22 @@
 {
-  "name": "postlab",
+  "name": "mypostlab2",
   "version": "1.0.0",
+  "description": "localtunnelconfig",
   "main": "index.js",
-  "license": "MIT",
-  "type": "module",
-  "dependencies": {
-    "dotenv": "^16.0.0",
-    "octokit": "^1.7.1"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giacomo-DeGrandi/TestPostLab.git"
+  },
+  "keywords": [
+    "hackaton2022laplateforme"
+  ],
+  "author": "giacomo-degrandi",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Giacomo-DeGrandi/TestPostLab/issues"
+  },
+  "homepage": "https://github.com/Giacomo-DeGrandi/TestPostLab#readme"
 }

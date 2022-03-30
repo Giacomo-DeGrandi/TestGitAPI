@@ -1,40 +1,35 @@
-import { Octokit, App } from "octokit";
-import 'dotenv/config';
 
-const octokit = new Octokit({ auth: process.env.TOKEN });
+import {Repo} from './Repo.js';
+import {Owner} from './Repo.js';
 
-const {
-    data: { login },
-  } = await octokit.rest.users.getAuthenticated();
 
-const {
-    data: { license },
-} = await ocktokit.rest.repos({repo,owner})
+(async()=>{
 
-console.log("Hello, %s", login);
+    const params = (new URL(document.location)).searchParams;
+    const repo = params.get('repo');
+    const owner = params.get('owner');
 
-console.log(license)
+    const repoInfo = {repo, owner}
 
-/*
-const repo = 'IAMDinosaur';
-const owner = 'ivanseidel';
+    console.log(repoInfo)
 
-const { data : {license, topics, language, description}} =  await octokit.rest.repos.get({
-    repo,
-    owner
-})
 
-// licences, versions, mots clés, liens web …
-// NOK collaborators
+        const myOwner = new Owner(repoInfo)
 
-console.log(license, topics, language, description)
+        await myOwner.getReposByOwner()
 
-// get branches
-const { data : branches} = await octokit.request(`GET /repos/${owner}/${repo}/branches`)
-console.log(branches)
 
-// get commits descriptions
-const { data: {commit}} = await octokit.request(`https://api.github.com/repos/ivanseidel/IAMDinosaur/commits/a3737740ad6e18eb3260f9c32d1070102abc4f5e`)
-console.log(commit)
-*/
+        const myRepo = new Repo(repoInfo)
+
+        await myRepo.getRepo()
+
+
+})() ;   // attention to the semicolon if u want to add another (async()=>{}) !!!
+
+
+
+
+
+
+
 
